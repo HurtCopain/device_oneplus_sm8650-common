@@ -25,8 +25,8 @@ source "${HELPER}"
 function vendor_imports() {
     cat <<EOF >>"$1"
 		"device/oneplus/sm8650-common",
-		"hardware/qcom-caf/sm8650",
-		"hardware/qcom-caf/wlan",
+		"hardware/qcom/",
+		"hardware/qcom/wlan",
 		"hardware/oplus",
 		"vendor/qcom/opensource/commonsys/display",
 		"vendor/qcom/opensource/commonsys-intf/display",

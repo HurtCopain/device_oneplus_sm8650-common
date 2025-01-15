@@ -7,7 +7,7 @@
 $(call inherit-product, hardware/oplus/Android.mk)
 
 # Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call inherit-product, hardware/qcom/common/common.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
@@ -73,8 +73,8 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.pineapple \
     vendor.qti.audio-adsprpc-service.rc
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
-AUDIO_PAL_DIR := hardware/qcom-caf/sm8650/audio/pal
+AUDIO_HAL_DIR := hardware/qcom/audio/primary-hal
+AUDIO_PAL_DIR := hardware/qcom/audio/pal
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -456,7 +456,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/oplus \
-    hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/qcom/common/libqti-perfd-client \
     kernel/oneplus/sm8650 \
     kernel/oneplus/sm8650-modules
 
