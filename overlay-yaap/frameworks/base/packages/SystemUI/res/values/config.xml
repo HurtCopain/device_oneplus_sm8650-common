@@ -11,4 +11,7 @@
     <!-- Burn-in protection -->
     <integer name="config_shift_interval">40</integer>
 
+    <!-- Force flash level adjustment in flashlight qs tile -->
+    <bool name="config_flashLevelSupportForce">true</bool>
+
 </resources>
