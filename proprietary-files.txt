@@ -1,6 +1,3 @@
-## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2581_15.0.0.305(EX01)).
-
 # Current blobs with ELF checks disabled:
 # libOPAlgoCamFaceBeautyCap, libEIS, libHIS, libOGLManager, libarcsoft_high_dynamic_range_v4 depends on NDK libnativewindow and build is unable to resolve its symbols
 # libar-pal depends on libagmclient, which is a gnu makefile target
@@ -1490,9 +1487,7 @@ odm/lib64/libUpScale.so
 odm/lib64/libVDBayerHDR.so
 odm/lib64/libVDBlurless.so;FIX_SONAME
 odm/lib64/libVDExternal.so
-odm/lib64/libVDPostureDetection.so
 odm/lib64/libVDSuperPhotoAPI.so;FIX_SONAME
-odm/lib64/libVDUpScale.so
 odm/lib64/libWaterMark.so
 odm/lib64/libXDocProcessSDK.so
 odm/lib64/libYTCommon.so
@@ -1989,9 +1984,9 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/etc/charger_fw_fstab.qti
 
 # CNE
-vendor/app/CACertService/CACertService.apk;NODEXPO
-vendor/app/CneApp/CneApp.apk;NODEXPO;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
-vendor/app/IWlanService/IWlanService.apk;NODEXPO
+vendor/app/CACertService/CACertService.apk
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
+vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
@@ -2331,7 +2326,7 @@ system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk;NODEXPO
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/bin/vendor.dpmd
 vendor/etc/dpm_vndr/vendor.dpm.conf
@@ -2428,16 +2423,16 @@ vendor/firmware/evass.mdt
 
 # eUICC
 my_product/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/permissions/privapp-permissions-euiccgoogle.xml
-my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED;NODEXPO
+my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
-# Fingerprint - from salami CPH2449_13.1.0.596(EX01)
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff|c8031f17ec9cf23f22aba0238cfd50c869edc534
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc|fb6116702903de0122eb00af471481ef1a65fe32
-odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml|78ca4f56ed1f5dd48c186718718fd9513629851e
+# Fingerprint
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml
 
 # Fingerprint
 odm/lib64/libclstc_fod_color.so
@@ -2600,42 +2595,42 @@ vendor/lib64/libmm-hdcpmgr.so
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
-my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk;NODEXPO
-my_product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk;NODEXPO
+my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
+my_product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
 
 # IMS(SYSTEM) - pinned from LA.QSSI.15.0.r1-10500-qssi.0
-system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|e4d155e1ba9b6b6b215eec7d70004cba6b6176e5
-system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|c5c9dd633c3f5450f315017cd4645a11de3d7ed3|4bde619dc1436503a0a4555a7a11b8eabcfb449d
-system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml|99b679504b1eba6fd311bd5610beec6988d34cfb
-system_ext/etc/sysconfig/qti_whitelist_system_ext.xml|fc930929bee7d1f8ecc5b1c76193acdc2f923fe7
-system_ext/lib64/lib-imsvideocodec.so|2db5b8c344b6de05dba4f9a1449fd74e17d78819
-system_ext/lib64/lib-imsvt.so|e1c75edf645be4017f63a4e92c67e92c3422b942
-system_ext/lib64/lib-imsvtextutils.so|acce4410add2b5088adab8f7b4e37e36e0c09105
-system_ext/lib64/lib-imsvtutils.so|57e53dc5e1b4b35e0abefc4ef54e81e3e6523fb8
-system_ext/lib64/libdiag_system.so|7109fb099b110c59bd59fbb7180d1f2eef0f299a
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|0b61c9104edbcf3284daae09b253b2acbed65ad6
-system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|ffda0b8f5af6212e645a50f454bdc44f69712fba
-system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so|c27f4e77d677a3e8d1c1c91ca1b40958dfb7f9d6
-system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so|4cf18759170f7de629d7197bda926048ebddc481
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|961321653e924726bd01af6bfbb33c6740bc66af
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|33008343e8ac15821278faecc1c234e8bea3fe2d
--system_ext/app/ImsRcsService/ImsRcsService.apk;NODEXPO|8a421431e6dcdadf281a55861c7256e24f6e223c
--system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar|15781e2856f4da51f548f43de9d3af58c9f49df1
--system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar|3641e287eaeb8fb936a16cdf260f09719bf0f5d4
--system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar|598f05b21960d224dd36dce61638281aecc968b8
--system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|79e52a4c2fd9bf2b972399568ee84c017b6f24ab
--system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar|9724b39093bb929455beb41a26ae8768694ea343
--system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar|d751e2d8c2c6b8f0345f6e2e70e07c4bd68afc60
--system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar|5c3c778777f3b6bd22aa14a6c2c2a8b61bc5b656
--system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar|2fee9cd9ac04a08ef10c5aaf039501fcfa4c0395
--system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar|f43fc229ebc92235e12e3946fc8325a9fe943c59
--system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar|b3fe344e360ef53c9c5d6d925c7b9a0f605a324b
--system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar|a7d2a6c9639dfb9dfbdc5361606b419a0384b8d0
--system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar|06b9dfe2c5c65199f3709d9224c33f53bb958594
--system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar|40bd25d668607efb933fecd6265940d89f21057b
--system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar|04f0b4c1ce0bd7ef2fe2153289f5a752c7c1c7cf
--system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar|26388f7cd876286822e536bb76b1277ef1dc76fa
--system_ext/priv-app/ims/ims.apk;NODEXPO|724e435ffa83f01bb8c841d0e45e3a772742c91b
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
+system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar
+system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar
+system_ext/priv-app/ims/ims.apk
 
 # IMS(VENDOR)
 vendor/bin/ims-dataservice-daemon
@@ -2857,15 +2852,15 @@ odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensenativeproxy_client.so
 
 # OPLUS Charger
-odm/bin/hw/vendor.oplus.hardware.charger-V5-service
+odm/bin/hw/vendor.oplus.hardware.charger-V6-service
 odm/bin/hw/wlschgd
-odm/etc/init/vendor.oplus.hardware.charger-V5-service.rc
+odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
 odm/etc/permissions/vendor-oplus-hardware-charger.xml
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
-odm/lib64/vendor.oplus.hardware.charger-V5-ndk.so
+odm/lib64/vendor.oplus.hardware.charger-V6-ndk.so
 odm/lib64/vendor.oplus.hardware.charger@1.0.so
 system_ext/framework/vendor.oplus.hardware.charger-V1-java.jar
-system_ext/framework/vendor.oplus.hardware.charger-V5-java.jar
+system_ext/framework/vendor.oplus.hardware.charger-V6-java.jar
 
 # OPLUS Charger firmware
 odm/firmware/fastchg/22877/bms_heating_config.txt
@@ -2936,7 +2931,7 @@ vendor/lib64/libprotobuf-cpp-full-21.7.so
 vendor/lib64/libprotobuf-cpp-lite-21.7.so
 
 # QCC
-system_ext/app/QCC/QCC.apk;NODEXPO
+system_ext/app/QCC/QCC.apk
 system_ext/bin/qccsyshal@1.2-service
 system_ext/bin/qccsyshal_aidl-service
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
@@ -3069,13 +3064,13 @@ odm/lib64/libdmtpclient.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.communicationcenter-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk.so
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk;NODEXPO
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 system_ext/framework/sts-osdk-plugin.jar
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk;NODEXPO
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
 vendor/bin/nicmd
@@ -3186,7 +3181,7 @@ vendor/lib64/qtiril-utils.so
 vendor/lib64/qtiwakelock.so
 vendor/lib64/vendor.oplus.hardware.appradioaidl-V1-ndk.so
 vendor/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.oplus.hardware.radio-V2-ndk_platform.so
+vendor/lib64/vendor.oplus.hardware.radio-V2-ndk.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
@@ -3227,7 +3222,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # RIL - UIM
-product/app/uimgbaservice/uimgbaservice.apk;NODEXPO
+product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimService.xml
@@ -3461,7 +3456,7 @@ vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
 
 # Time services
-vendor/app/TimeService/TimeService.apk;NODEXPO
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
@@ -3580,7 +3575,7 @@ system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
-system_ext/priv-app/WfdService/WfdService.apk;NODEXPO
+system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
